@@ -8,4 +8,27 @@ public class Product {
     private ProductType productType;
     private Long price;
 
+    public Long getId() {
+        return id;
+    }
+
+//    public void setId(Long id) {
+//        this.id = id;
+//    }
+
+    public ProductType getProductType() {
+        return productType;
+    }
+
+    public void setProductType(ProductType productType) {
+        this.productType = productType;
+    }
+
+    public Long getPrice() {
+        return price;
+    }
+
+    public void setPrice(Long price) {
+        this.price = price;
+    }
 }
