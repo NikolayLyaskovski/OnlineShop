@@ -1,15 +1,22 @@
 package com.example.online.shop.model;
 
+import javax.persistence.*;
 import java.time.Instant;
 
+@Entity
+@Table(name = "shipments")
 public class Shipment {
 
-    private Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long shipmentId;
+    @Column(name = "start_date")
     private Instant startDate;
+    @Column(name = "end_date")
     private Instant endDate;
 
-    public Long getId() {
-        return id;
+    public Long getShipmentId() {
+        return shipmentId;
     }
 
 //    public void setId(Long id) {

@@ -2,12 +2,20 @@ package com.example.online.shop.model;
 
 import com.example.online.shop.enums.UserType;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "users")
 public class User {
-    private Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long userId;
+
+    @Enumerated(EnumType.STRING)
     private UserType userType;
 
-    public Long getId() {
-        return id;
+    public Long getUserId() {
+        return userId;
     }
 
 //    public void setId(Long id) {

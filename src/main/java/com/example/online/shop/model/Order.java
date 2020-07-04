@@ -1,12 +1,21 @@
 package com.example.online.shop.model;
 
+
+import javax.persistence.*;
+
+@Entity
+@Table(name = "orders")
 public class Order {
 
-    private Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long orderId;
+
+    @Column
     private Long quantity;
 
-    public Long getId() {
-        return id;
+    public Long getOrderId() {
+        return orderId;
     }
 
 //    public void setId(Long id) {

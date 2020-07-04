@@ -2,12 +2,21 @@ package com.example.online.shop.model;
 
 import com.example.online.shop.enums.PaymentType;
 
+import javax.persistence.*;
+
+
+@Entity
+@Table(name = "payments")
 public class Payment {
-    private Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long paymentId;
+
+    @Enumerated(EnumType.STRING)
     private PaymentType paymentType;
 
-    public Long getId() {
-        return id;
+    public Long getPaymentId() {
+        return paymentId;
     }
 
 //    public void setId(Long id) {
