@@ -2,7 +2,7 @@ server:
   port: 8080
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/bank_system
+    url: jdbc:postgresql://localhost:5432/online_shop
     username: postgres
     password: admin
     hikari:
