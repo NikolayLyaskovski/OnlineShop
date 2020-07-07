@@ -10,10 +10,20 @@ public class Shipment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long shipmentId;
+
     @Column(name = "start_date")
     private Instant startDate;
+
     @Column(name = "end_date")
     private Instant endDate;
+
+    @ManyToOne
+    @JoinColumn(name = "orderId")
+    private Order order;
+
+    @ManyToOne
+    @JoinColumn(name = "addressId")
+    private Address address;
 
     public Long getShipmentId() {
         return shipmentId;

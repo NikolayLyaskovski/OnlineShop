@@ -15,6 +15,14 @@ public class Address {
     @Column
     private String street;
 
+    @ManyToOne
+    @JoinColumn(name = "cityId")
+    private City city;
+
+    @ManyToOne
+    @JoinColumn(name = "userId")
+    private User user;
+
     public Long getId() {
         return adressId;
     }

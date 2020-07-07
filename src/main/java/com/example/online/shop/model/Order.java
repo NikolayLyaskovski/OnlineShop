@@ -14,6 +14,19 @@ public class Order {
     @Column
     private Long quantity;
 
+    @ManyToOne
+    @JoinColumn(name = "userId")
+    private User user;
+
+    @ManyToOne
+    @JoinColumn(name = " productId")
+    private Product product;
+
+    @ManyToOne
+    @JoinColumn(name = "paymentId")
+    private Payment payment;
+
+
     public Long getOrderId() {
         return orderId;
     }

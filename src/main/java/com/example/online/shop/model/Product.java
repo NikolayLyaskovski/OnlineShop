@@ -16,6 +16,10 @@ public class Product {
     @Column
     private Long price;
 
+    @ManyToOne
+    @JoinColumn(name = "mediaId")
+    private Media media;
+
     public Long getId() {
         return productId;
     }
