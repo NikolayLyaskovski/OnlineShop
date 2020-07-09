@@ -3,7 +3,9 @@ package com.example.online.shop.service;
 import com.example.online.shop.model.Product;
 import com.example.online.shop.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class ProductServiceImpl implements ProductService {
     private final ProductRepository productRepository;
 

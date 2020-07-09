@@ -5,11 +5,10 @@ import com.example.online.shop.service.AddressService;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("api/adresses")
+@RequestMapping("api/addresses")
 public class AddressController {
 
     private final AddressService addressService;
-
 
     public AddressController(AddressService addressService) {
         this.addressService = addressService;

@@ -3,7 +3,9 @@ package com.example.online.shop.service;
 import com.example.online.shop.model.Order;
 import com.example.online.shop.repository.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class OrderServiceImpl implements OrderService {
     private final OrderRepository orderRepository;
     @Autowired

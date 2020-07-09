@@ -3,13 +3,13 @@ package com.example.online.shop.service;
 import com.example.online.shop.model.Address;
 import com.example.online.shop.repository.AddressRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class AddressServiceImpl implements AddressService {
 
-    private final AddressRepository addressRepository;
     @Autowired
-    public AddressServiceImpl(AddressRepository addressRepository) {
-        this.addressRepository = addressRepository;
+    private AddressServiceImpl(AddressRepository addressRepository) {
     }
 
 

@@ -3,7 +3,9 @@ package com.example.online.shop.service;
 import com.example.online.shop.model.Payment;
 import com.example.online.shop.repository.PaymentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class PaymentServiceImpl implements PaymentService {
     private final PaymentRepository paymentRepository;
 

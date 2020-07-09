@@ -3,7 +3,9 @@ package com.example.online.shop.service;
 import com.example.online.shop.model.City;
 import com.example.online.shop.repository.CityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class CityServiceImpl implements CityService {
     private final CityRepository cityRepository;
     @Autowired

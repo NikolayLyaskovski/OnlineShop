@@ -1,8 +1,9 @@
 package com.example.online.shop.repository;
 
+import com.example.online.shop.model.City;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface CityRepository extends CrudRepository {
+public interface CityRepository extends CrudRepository<City, Long> {
 }
